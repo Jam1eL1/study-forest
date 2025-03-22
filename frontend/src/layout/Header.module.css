@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1400px;
+}
+
+.logo {
+  height: 35px;
+
+  transition: all 0.3s ease;
+
+  cursor: pointer;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+}
+
+.create__study__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  width: 100%;
+  max-width: 106px;
+
+  height: 100%;
+
+  background-color: var(--bg-green);
+  border-radius: 8px;
+
+  transition: all 0.3s ease;
+
+  cursor: pointer;
+}
+
+.create__study__button__text__bg {
+  position: absolute;
+  top: 10px;
+
+  font-family: var(--font-jejudoldam);
+  font-size: 14px;
+  color: var(--text-green);
+
+  transition: all 0.3s ease;
+}
+
+.create__study__button__text {
+  position: absolute;
+  top: 12px;
+
+  font-family: var(--font-jejudoldam);
+  font-size: 14px;
+  color: var(--text-white);
+
+  z-index: 1;
+
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 375px) {
+  .logo {
+    height: 60px;
+  }
+
+  .create__study__button {
+    max-width: 160px;
+    border-radius: 14px;
+  }
+
+  .create__study__button__text__bg {
+    top: 21px;
+
+    font-size: 18px;
+  }
+
+  .create__study__button__text {
+    top: 24px;
+
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .create__study__button {
+    max-width: 252px;
+    border-radius: 16px;
+  }
+
+  .create__study__button__text__bg {
+    top: 21px;
+  }
+
+  .create__study__button__text {
+    top: 24px;
+  }
+}
+
+/* TODO: 작업용 임시 네비게이션 메뉴 입니다. 나중에 삭제해야 합니다. */
+
+.nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  gap: 20px;
+}
+
+.nav > ul > li {
+  font-size: 24px;
+  color: var(--text-white);
+}
