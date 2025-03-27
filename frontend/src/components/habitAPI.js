@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 >>>>>>> ad86d1b (feat: 습관 create 생성제한x &habitCreateAPI)
+=======
+<<<<<<< Updated upstream
+>>>>>>> 435b72b (feat: 스터디 업데이트 모듈 구현)
 import axios from "axios";
 import SERVER_URL from "../server.js";
 
@@ -36,6 +40,9 @@ export const patchHabits = async (habitId, data) => {
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 435b72b (feat: 스터디 업데이트 모듈 구현)
 =======
 import axios from "axios";
 import SERVER_URL from "../server.js";
@@ -71,5 +78,8 @@ export const patchHabits = async (habitId, data) => {
   }
 };
 >>>>>>> Stashed changes
+<<<<<<< HEAD
 =======
 >>>>>>> ad86d1b (feat: 습관 create 생성제한x &habitCreateAPI)
+=======
+>>>>>>> 435b72b (feat: 스터디 업데이트 모듈 구현)

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React from "react";
+>>>>>>> 1dc27b2 (feat: 스터디 업데이트 모듈 구현)
 import styles from "./EditStudyForm.module.css";
 import bg1 from "/images/studyBg/Rectangle 1.svg";
 import bg2 from "/images/studyBg/Rectangle 1249.svg";
@@ -9,7 +13,12 @@ import bg6 from "/images/studyBg/Frame 2609427.svg";
 import bg7 from "/images/studyBg/Frame 2609428.svg";
 import bg8 from "/images/studyBg/Frame 2609429.svg";
 import btnCloseIcon from "/images/icon/btn_visibility_on_24px-1.svg";
+<<<<<<< HEAD
 import axios from "axios";
+=======
+<<<<<<< HEAD
+import axios from 'axios';
+>>>>>>> 435b72b (feat: 스터디 업데이트 모듈 구현)
 
 const backgroundImages = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8];
 
@@ -71,6 +80,13 @@ const EditStudyForm = ({ studyId }) => {
     }
   };
 
+=======
+import btnSeeIcon from "/images/icon/btn_visibility_on_24px.svg";
+
+const backgroundImages = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8];
+
+const EditStudyForm = () => {
+>>>>>>> 1dc27b2 (feat: 스터디 업데이트 모듈 구현)
   return (
     <section className={styles.section}>
       <article className={styles.article}>
@@ -82,8 +98,11 @@ const EditStudyForm = ({ studyId }) => {
               className={styles.input}
               type="text"
               placeholder="닉네임을 입력해 주세요"
+<<<<<<< HEAD
               value={nickname}
               onChange={(e) => setNickname(e.target.value)}
+=======
+>>>>>>> 1dc27b2 (feat: 스터디 업데이트 모듈 구현)
             />
           </label>
           <label className={styles.label}>
@@ -92,8 +111,11 @@ const EditStudyForm = ({ studyId }) => {
               className={styles.input}
               type="text"
               placeholder="스터디 이름을 입력해주세요"
+<<<<<<< HEAD
               value={studyName}
               onChange={(e) => setStudyName(e.target.value)}
+=======
+>>>>>>> 1dc27b2 (feat: 스터디 업데이트 모듈 구현)
             />
           </label>
           <label className={styles.label}>
@@ -101,8 +123,11 @@ const EditStudyForm = ({ studyId }) => {
             <textarea
               className={styles.inputBox}
               placeholder="소개 멘트를 작성해 주세요"
+<<<<<<< HEAD
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+=======
+>>>>>>> 1dc27b2 (feat: 스터디 업데이트 모듈 구현)
             />
           </label>
         </div>
@@ -110,6 +135,7 @@ const EditStudyForm = ({ studyId }) => {
           <p className={styles.inputBoxTitle}>배경을 선택해주세요</p>
           <div className={styles.bgBox}>
             {backgroundImages.map((bgs) => (
+<<<<<<< HEAD
               <img
                 key={bgs}
                 src={bgs}
@@ -120,6 +146,9 @@ const EditStudyForm = ({ studyId }) => {
                     selectedBackground === bgs ? "2px solid blue" : "none",
                 }}
               />
+=======
+              <img src={bgs} alt="bgImg" />
+>>>>>>> 1dc27b2 (feat: 스터디 업데이트 모듈 구현)
             ))}
           </div>
         </div>
@@ -129,22 +158,36 @@ const EditStudyForm = ({ studyId }) => {
             <div className={styles.pwInputBox}>
               <input
                 className={styles.input}
+<<<<<<< HEAD
                 type="password"
                 placeholder="비밀번호를 입력해주세요"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+<<<<<<< HEAD
+=======
+              <img className={styles.btnIcon} src={btnCloseIcon} alt="btnSeeIcon" />
+=======
+                type="text"
+                placeholder="비밀번호를 입력해주세요"
+              />
+>>>>>>> 435b72b (feat: 스터디 업데이트 모듈 구현)
               <img
                 className={styles.btnIcon}
                 src={btnCloseIcon}
                 alt="btnSeeIcon"
               />
+<<<<<<< HEAD
+=======
+>>>>>>> 1dc27b2 (feat: 스터디 업데이트 모듈 구현)
+>>>>>>> 435b72b (feat: 스터디 업데이트 모듈 구현)
             </div>
           </label>
           <label className={styles.label}>
             <p className={styles.inputBoxTitle}>비밀번호 확인</p>
             <input
               className={styles.input}
+<<<<<<< HEAD
               type="password"
               placeholder="비밀번호를 다시 한 번 입력해주세요"
               value={confirmPassword}
@@ -155,9 +198,25 @@ const EditStudyForm = ({ studyId }) => {
         <button className={styles.createBtn} onClick={handleUpdateStudy}>
           수정하기
         </button>
+=======
+              type="text"
+              placeholder="비밀번호를 다시 한 번 입력해주세요"
+            />
+          </label>
+        </div>
+        <button className={styles.createBtn}>수정하기</button>
+>>>>>>> 1dc27b2 (feat: 스터디 업데이트 모듈 구현)
       </article>
     </section>
   );
 };
 
+<<<<<<< HEAD
 export default EditStudyForm;
+=======
+<<<<<<< HEAD
+export default EditStudyForm;
+=======
+export default EditStudyForm;
+>>>>>>> 1dc27b2 (feat: 스터디 업데이트 모듈 구현)
+>>>>>>> 435b72b (feat: 스터디 업데이트 모듈 구현)

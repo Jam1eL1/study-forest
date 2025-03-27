@@ -7,7 +7,11 @@ const studyUpdate = express.Router();
 studyUpdate.put("/study/:studyId/update", async (req, res) => {
 =======
 studyUpdate.post("/verify-password", async (req, res) => {
+<<<<<<< HEAD
 >>>>>>> 83b45e2 (feat: 스터디 업데이트 모듈 구현)
+=======
+>>>>>>> 1dc27b2 (feat: 스터디 업데이트 모듈 구현)
+>>>>>>> 435b72b (feat: 스터디 업데이트 모듈 구현)
   const data = req.body;
 
   try {
@@ -48,7 +52,11 @@ studyUpdate.post("/verify-password", async (req, res) => {
     res
       .status(500)
       .json({ success: false, message: "서버 오류가 발생했습니다." });
+<<<<<<< HEAD
 >>>>>>> 83b45e2 (feat: 스터디 업데이트 모듈 구현)
+=======
+>>>>>>> 1dc27b2 (feat: 스터디 업데이트 모듈 구현)
+>>>>>>> 435b72b (feat: 스터디 업데이트 모듈 구현)
   }
 });
 
