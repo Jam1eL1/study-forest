@@ -7,9 +7,12 @@ button {
   color: inherit;
   outline: none;
   cursor: pointer;
+<<<<<<< HEAD
   text-decoration: none;
   font-weight: 500;
   font-size: 12px;
+=======
+>>>>>>> 2fa9726 (refactor: StudyDetailNav 요소 a->button 으로 변경, 버튼 기본디자인 리셋 스타일 적용)
 }
 
 .header {
