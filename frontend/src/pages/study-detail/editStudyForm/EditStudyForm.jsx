@@ -9,7 +9,7 @@ import bg6 from "/images/studyBg/Frame 2609427.svg";
 import bg7 from "/images/studyBg/Frame 2609428.svg";
 import bg8 from "/images/studyBg/Frame 2609429.svg";
 import btnCloseIcon from "/images/icon/btn_visibility_on_24px-1.svg";
-import axios from 'axios';
+import axios from "axios";
 
 const backgroundImages = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8];
 
@@ -19,7 +19,9 @@ const EditStudyForm = ({ studyId }) => {
   const [description, setDescription] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [selectedBackground, setSelectedBackground] = useState(backgroundImages[0]);
+  const [selectedBackground, setSelectedBackground] = useState(
+    backgroundImages[0]
+  );
 
   const handleUpdateStudy = async () => {
     if (
@@ -113,7 +115,10 @@ const EditStudyForm = ({ studyId }) => {
                 src={bgs}
                 alt="bgImg"
                 onClick={() => setSelectedBackground(bgs)}
-                style={{ border: selectedBackground === bgs ? "2px solid blue" : "none" }}
+                style={{
+                  border:
+                    selectedBackground === bgs ? "2px solid blue" : "none",
+                }}
               />
             ))}
           </div>
@@ -129,7 +134,11 @@ const EditStudyForm = ({ studyId }) => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <img className={styles.btnIcon} src={btnCloseIcon} alt="btnSeeIcon" />
+              <img
+                className={styles.btnIcon}
+                src={btnCloseIcon}
+                alt="btnSeeIcon"
+              />
             </div>
           </label>
           <label className={styles.label}>
