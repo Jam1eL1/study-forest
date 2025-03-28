@@ -1,5 +1,9 @@
 import express from "express";
+<<<<<<< HEAD
 import prisma from "@prisma/client";
+=======
+import prisma from "../../db/prisma/client.prisma.js";
+>>>>>>> 4e1d11f (bugfix: 불필요한 임포트 제거)
 
 const studyVerifyPassword = express.Router();
 
