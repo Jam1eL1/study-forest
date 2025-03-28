@@ -5,9 +5,9 @@ import prisma from "@prisma/client";
 import prisma from "../../db/prisma/client.prisma.js";
 >>>>>>> 4e1d11f (bugfix: 불필요한 임포트 제거)
 
-const studyVerifyPassword = express.Router();
+const editStudyModules = express.Router();
 
-studyVerifyPassword.post("/verify-password", async (req, res) => {
+editStudyModules.post("/verify-password", async (req, res) => {
   const { userId, password } = req.body;
 
   try {
@@ -30,9 +30,12 @@ studyVerifyPassword.post("/verify-password", async (req, res) => {
         .status(401)
         .json({ success: false, message: "비밀번호가 일치하지 않습니다." });
     }
-  } catch (err) {
-    next(err);
+  } catch (error) {
+    console.error("비밀번호 검증 중 오류 발생", error);
+    res
+      .status(500)
+      .json({ success: false, message: "서버 오류가 발생했습니다." });
   }
 });
 
-export default studyVerifyPassword;
+export default editStudyModules;

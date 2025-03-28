@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> ad86d1b (feat: 습관 create 생성제한x &habitCreateAPI)
 import axios from "axios";
 import SERVER_URL from "../server.js";
 
@@ -32,6 +35,7 @@ export const patchHabits = async (habitId, data) => {
     handleError(e);
   }
 };
+<<<<<<< HEAD
 =======
 import axios from "axios";
 import SERVER_URL from "../server.js";
@@ -67,3 +71,5 @@ export const patchHabits = async (habitId, data) => {
   }
 };
 >>>>>>> Stashed changes
+=======
+>>>>>>> ad86d1b (feat: 습관 create 생성제한x &habitCreateAPI)

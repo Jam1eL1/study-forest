@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> ad86d1b (feat: 습관 create 생성제한x &habitCreateAPI)
 import React, { useEffect, useState } from "react";
 import styles from "@components/Habits.module.css";
 import { getHabits, patchHabits } from "./habitAPI";
@@ -71,6 +74,7 @@ function Habits() {
 }
 
 export default Habits;
+<<<<<<< HEAD
 =======
 import React, { useEffect, useState } from "react";
 import styles from "@components/Habits.module.css";
@@ -143,3 +147,5 @@ function Habits() {
 
 export default Habits;
 >>>>>>> Stashed changes
+=======
+>>>>>>> ad86d1b (feat: 습관 create 생성제한x &habitCreateAPI)
