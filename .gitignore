@@ -1,5 +1,0 @@
-## 실수 방지를 위해 루트 디렉토리에 깃이그노어 추가
-
-node_modules
-package.json
-package-lock.json

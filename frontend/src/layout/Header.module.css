@@ -10,18 +10,18 @@
   align-items: center;
 
   width: 100%;
-  max-width: 1440px;
+  max-width: 1400px;
 }
 
 .logo {
-  height: 40px;
+  height: 35px;
 
   transition: all 0.3s ease;
 
   cursor: pointer;
 }
 
-.logo > img {
+.logo img {
   height: 100%;
   width: auto;
 }
@@ -34,7 +34,7 @@
   position: relative;
 
   width: 100%;
-  max-width: 120px;
+  max-width: 106px;
 
   height: 100%;
 
@@ -48,7 +48,7 @@
 
 .create__study__button__text__bg {
   position: absolute;
-  top: 14px;
+  top: 10px;
 
   font-family: var(--font-jejudoldam);
   font-size: 14px;
@@ -59,7 +59,7 @@
 
 .create__study__button__text {
   position: absolute;
-  top: 16px;
+  top: 12px;
 
   font-family: var(--font-jejudoldam);
   font-size: 14px;
@@ -70,13 +70,13 @@
   transition: all 0.3s ease;
 }
 
-@media screen and (min-width: 744px) {
+@media screen and (min-width: 375px) {
   .logo {
     height: 60px;
   }
 
   .create__study__button {
-    max-width: 180px;
+    max-width: 160px;
     border-radius: 14px;
   }
 
@@ -93,7 +93,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 744px) {
   .create__study__button {
     max-width: 252px;
     border-radius: 16px;

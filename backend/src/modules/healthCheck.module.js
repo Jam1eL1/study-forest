@@ -1,4 +1,5 @@
-import express from "express";
+const express = require("express");
+// const prisma = require("../db/prisma/client.prisma"); // 프리즈마 사용하려면 먼저 임포트해야 합니다. 주석 지우고 사용하세요. `Ctrl + /` 누르면 주석 토글 가능.
 
 const healthCheckRouter = express.Router();
 
@@ -14,4 +15,4 @@ healthCheckRouter.get("/", (req, res, next) => {
   }
 });
 
-export default healthCheckRouter;
+module.exports = healthCheckRouter;
