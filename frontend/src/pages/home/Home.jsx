@@ -1,13 +1,11 @@
-import BrowseCardList from './BrowseCardList';
-import styles from './Home.module.css';
-import RecentlyCardList from './RecentlyCardList';
+import React from 'react';
 
 const Home = () => {
   return (
-    <section className={styles.home}>
-      <RecentlyCardList />
-      <BrowseCardList />
-    </section>
+    <div>
+      <h1>스터디 포레스트</h1>
+      <p>함께 성장하는 스터디 커뮤니티</p>
+    </div>
   );
 };
 

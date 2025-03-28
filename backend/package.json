@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "node ./src/App.js",
-    "dev": "nodemon ./src/App.js"
+    "dev": "nodemon ./src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "@prisma/client": "^6.5.0",
     "@types/express": "^5.0.1",
