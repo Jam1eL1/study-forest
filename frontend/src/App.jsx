@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "../public/font/Pretendard-1.3.9/web/static/pretendard.css";
@@ -31,6 +32,8 @@ export default App;
 =======
 =======
 >>>>>>> 1dc27b2 (feat: 스터디 업데이트 모듈 구현)
+=======
+>>>>>>> c71daa4 (refactor: 스터디수정폼 URL App.jsx에서 삭제)
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import '../public/font/Pretendard-1.3.9/web/static/pretendard.css';
@@ -75,6 +78,18 @@ import TodayHabit from "@today-habit/TodayHabit";
 import StudyDetail from "@study-detail/StudyDetail";
 import StudyCreate from "@study-create/StudyCreate";
 import EditStudyForm from "@study-detail/editStudyForm/EditStudyForm";
+=======
+
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import '../public/font/Pretendard-1.3.9/web/static/pretendard.css';
+import Header from './layout/Header';
+import Home from '@home/Home';
+import TodayFocus from '@today-focus/TodayFocus';
+import TodayHabit from '@today-habit/TodayHabit';
+import StudyDetail from '@study-detail/StudyDetail';
+import StudyCreate from '@study-create/StudyCreate';
+>>>>>>> 73bfac4 (refactor: 스터디수정폼 URL App.jsx에서 삭제)
 
 function App() {
   return (
@@ -82,12 +97,20 @@ function App() {
       <Header />
       <main>
         <Routes>
+<<<<<<< HEAD
           <Route path="/" element={<Home />} />
           <Route path="/study-create" element={<StudyCreate />} />
           <Route path="/study-detail" element={<StudyDetail />} />
           <Route path="/today-focus" element={<TodayFocus />} />
           <Route path="/today-habit" element={<TodayHabit />} />
           <Route path="/edit-study-form" element={<EditStudyForm />} />
+=======
+          <Route path='/' element={<Home />} />
+          <Route path='/study-create' element={<StudyCreate />} />
+          <Route path='/study-detail/:id' element={<StudyDetail />} />
+          <Route path='/today-focus' element={<TodayFocus />} />
+          <Route path='/today-habit' element={<TodayHabit />} />
+>>>>>>> a477aed (refactor: 스터디수정폼 URL App.jsx에서 삭제)
         </Routes>
       </main>
     </>
