@@ -9,6 +9,10 @@ const TodayHabitCreate = ({ onClose }) => {
     "미라클모닝 6시 기상",
     "새벽 운동",
     "저녁 운동",
+    "저녁 운동",
+    "저녁 운동",
+    "저녁 운동",
+    "저녁 운동",
   ]);
   const handleInputChange = (index, updatingHabit) => {
     const updatedHabits = habits.map((habit, idx) =>
@@ -19,9 +23,7 @@ const TodayHabitCreate = ({ onClose }) => {
 
   //습관 추가
   const handleAddHabit = () => {
-    if (habits.length < 7) {
-      setHabits([...habits, "                       "]); // 추가
-    }
+    setHabits([...habits, "                   "]); // 추가
   };
   //습관 삭제 habits 필터링
   const handleDeleteHabit = (index) => {
@@ -40,6 +42,11 @@ const TodayHabitCreate = ({ onClose }) => {
                 type="text"
                 className={styles.singleHabit}
                 value={habit}
+                onClick={() => {
+                  if (habit === "                   ") {
+                    handleInputChange(index, "");
+                  }
+                }}
                 onChange={(e) => handleInputChange(index, e.target.value)} //map에서 주는 index
                 size={habit.length || 10}
               />

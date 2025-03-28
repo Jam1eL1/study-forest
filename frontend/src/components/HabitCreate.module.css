@@ -5,9 +5,8 @@
   transform: translate(-50%, -50%);
   background-color: var(--color-white);
   width: 648px;
-  height: 841px;
-  max-height: 80vh; /* 최대 높이를 80vh로 설정 */
-  overflow-y: auto; /* 세로 스크롤 가능 */
+  min-height: 841px;
+  height: auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -88,10 +87,7 @@
   cursor: pointer;
 }
 .btns {
-  position: fixed;
   bottom: 40px; /* 모달 하단에서 40px 떨어짐 */
-  left: 50%; /* 모달 내에서 수평 중앙 */
-  transform: translateX(-50%); /* 정확히 중앙에 위치 */
   display: flex;
   justify-content: center;
   width: 100%;
