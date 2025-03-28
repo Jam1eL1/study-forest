@@ -40,5 +40,21 @@ habitsRouter.post("/posthabit/:studyId", async (req, res, next) => {
     next(e);
   }
 });
+habitsRouter.delete("/deletehabit/:habitId", async (req, res, next) => {
+  try {
+    const habitId = Number(req.params.habitId);
+    const habitExists = await prisma.habit.findUnique({
+      where: { id: habitId },
+    });
 
+    if (!habitExists) return res.status(404).send("Habit not found");
+
+    const deletedHabit = await prisma.habit.delete({
+      where: { id: habitId },
+    });
+    res.status(200).json(deletedHabit);
+  } catch (e) {
+    next(e);
+  }
+});
 export default habitsRouter;

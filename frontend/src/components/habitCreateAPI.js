@@ -14,19 +14,17 @@ const handleError = (e) => {
   }
 };
 
-export const getHabits = async (studyId) => {
+export const postHabits = async (studyId) => {
   try {
-    const res = await instance.get(`/gethabit/${studyId}`);
+    const res = await instance.post(`/posthabit/${studyId}`);
     return res.data;
   } catch (e) {
     handleError(e);
   }
 };
-
-export const patchHabits = async (habitId, data) => {
+export const deleteHabits = async () => {
   try {
-    const res = await instance.patch(`/patchhabit/${habitId}`, data);
-    return res.data;
+    const res = await instance.delete(`/deletehabit/${studyId}`);
   } catch (e) {
     handleError(e);
   }
