@@ -8,7 +8,7 @@ const Header = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === '/' || location.pathname === '/create-study') {
+    if (location.pathname === '/' || location.pathname === '/study-create') {
       setIsOpen(true);
     } else {
       setIsOpen(false);
@@ -24,7 +24,7 @@ const Header = () => {
           </Link>
 
           {isOpen && (
-            <Link to='/create-study' className={styles.create__study__button}>
+            <Link to='/study-create' className={styles.create__study__button}>
               <span className={styles.create__study__button__text__bg}>
                 스터디 만들기
               </span>

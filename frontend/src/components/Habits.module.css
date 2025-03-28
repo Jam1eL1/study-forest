@@ -1,0 +1,44 @@
+.habitList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: auto;
+  max-width: 400px;
+  width: 100%;
+}
+
+.habitChecked {
+  width: 100%;
+  height: 54px;
+  border-radius: 20px;
+  background-color: var(--color-green-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.habitUnchecked {
+  width: 100%;
+  height: 54px;
+  border-radius: 20px;
+  background-color: var(--color-gray-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-gray-300);
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.noHabitText {
+  text-align: center;
+  color: var(--color-gray-300);
+}

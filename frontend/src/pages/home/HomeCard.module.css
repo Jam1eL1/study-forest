@@ -1,0 +1,193 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 240px;
+
+  gap: 12px;
+
+  background-color: var(--bg-green-light);
+
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+
+  padding: 30px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card[data-bg='red'] {
+  background-color: var(--bg-pink);
+}
+
+.card[data-bg='yellow'] {
+  background-color: var(--bg-yellow);
+}
+
+.card[data-bg='green'] {
+  background-color: var(--bg-green-light);
+}
+
+.card[data-bg='blue'] {
+  background-color: var(--bg-blue);
+}
+
+.card[data-bg='img'] {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cardHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.headerTop {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  gap: 8px;
+}
+
+.pointsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+
+  width: 90px;
+  height: 24px;
+
+  border-radius: 20px;
+
+  padding: 4px 0;
+
+  border: 1px solid rgb(223, 223, 223);
+}
+
+.card[data-bg='red'] .pointsContainer,
+.card[data-bg='yellow'] .pointsContainer,
+.card[data-bg='green'] .pointsContainer,
+.card[data-bg='blue'] .pointsContainer {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.card[data-bg='img'] .pointsContainer {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.pointsText {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.card[data-bg='red'] .pointsText,
+.card[data-bg='yellow'] .pointsText,
+.card[data-bg='green'] .pointsText,
+.card[data-bg='blue'] .pointsText {
+  color: var(--text-gray);
+}
+
+.card[data-bg='img'] .pointsText {
+  color: var(--text-white);
+}
+
+.cardTitleContainer {
+  display: flex;
+
+  gap: 5px;
+
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--text-black);
+}
+
+.card[data-bg='red'] .authorName {
+  color: var(--text-pink);
+}
+
+.card[data-bg='yellow'] .authorName {
+  color: var(--text-yellow);
+}
+
+.card[data-bg='green'] .authorName {
+  color: var(--text-green);
+}
+
+.card[data-bg='blue'] .authorName {
+  color: var(--text-blue);
+}
+
+.card[data-bg='img'] .authorName {
+  color: var(--text-black);
+}
+
+.cardTitle {
+  line-height: 1.4;
+}
+
+.cardDayContainer {
+  font-weight: 400;
+  font-size: 14px;
+
+  color: var(--text-gray);
+}
+
+.cardContentContainer {
+  width: 80%;
+  color: var(--text-black);
+}
+
+.cardContent {
+  font-size: 14px;
+}
+
+.emojiContainer {
+  display: flex;
+  align-items: center;
+
+  color: var(--text-white);
+
+  gap: 5px;
+}
+
+.emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  font-size: 12px;
+
+  padding: 6px 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  border-radius: 50px;
+}
+
+@media screen and (min-width: 744px) {
+  .headerTop {
+    justify-content: space-between;
+
+    flex-direction: row-reverse;
+  }
+
+  .cardContent {
+    font-size: 18px;
+  }
+
+  .cardTitleContainer {
+    font-size: 18px;
+  }
+}

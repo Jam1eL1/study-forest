@@ -1,0 +1,21 @@
+###
+GET http://localhost:5090/api/habits/gethabit/10
+
+
+###
+PATCH http://localhost:5090/api/habits/patchhabit/4
+Content-Type: application/json
+
+{
+    "monday":true
+}
+
+###
+POST http://localhost:5090/api/habits/posthabit/10
+Content-Type: application/json
+
+{
+    "title":"밥 잘먹기"
+}
+
+DELETE http://localhost:5090/api/habits/deletehabit/4

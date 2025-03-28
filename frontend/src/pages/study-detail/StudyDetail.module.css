@@ -1,0 +1,27 @@
+.container {
+  width: 344px;
+  margin: 20px auto 56px auto;
+  border-radius: 20px;
+  background-color: var(--color-white);
+  padding: 16px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media screen and (min-width: 744px) {
+  .container {
+    min-width: 696px;
+    margin: 16px auto 81px auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    min-width: 1200px;
+    margin: 40px auto 73px auto;
+  }
+}

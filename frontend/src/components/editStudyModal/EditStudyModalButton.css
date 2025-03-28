@@ -1,0 +1,225 @@
+:root {
+  /* 색상 */
+
+  /* White */
+  --color-white: #ffffff;
+
+  /* Black */
+  --color-black: #414141;
+
+  /* Gray */
+  --color-gray-100: #eeeeee;
+  --color-gray-200: #dddddd;
+  --color-gray-300: #818181;
+  --color-gray-400: #f6f4ef;
+
+  /* Green */
+  --color-green-100: #e1edde;
+  --color-green-200: #99c08e;
+  --color-green-300: #578246;
+
+  /* Red */
+  --color-red-100: #ffa3a5;
+  --color-red-200: #f50e0e;
+  --color-red-300: #c41013;
+
+  /* Yellow */
+  --color-yellow-100: #fff1cc;
+  --color-yellow-200: #c18e1b;
+
+  /* Blue */
+  --color-blue-100: #e0f1f5;
+  --color-blue-200: #418099;
+
+  /* Pink */
+  --color-pink-100: #fde0e9;
+  --color-pink-200: #bc3c6a;
+
+  /* 시맨틱 컬러 */
+
+  /* 배경 */
+  --bg-white: var(--color-white);
+  --bg-gray: var(--color-gray-400);
+  --bg-green-light: var(--color-green-100);
+  --bg-green: var(--color-green-200);
+  --bg-yellow: var(--color-yellow-100);
+  --bg-blue: var(--color-blue-100);
+  --bg-pink: var(--color-pink-100);
+
+  /* 텍스트 */
+  --text-white: var(--color-white);
+  --text-black: var(--color-black);
+  --text-gray: var(--color-gray-300);
+  --text-red: var(--color-red-300);
+  --text-green: var(--color-green-300);
+  --text-yellow: var(--color-yellow-200);
+  --text-blue: var(--color-blue-200);
+  --text-pink: var(--color-pink-200);
+
+  /* 에러 상태 */
+  --error-text: var(--color-red-300);
+  --error-light: var(--color-red-200);
+  --error-bg: var(--color-red-100);
+
+  /* Radius */
+  --radius-sm: 16px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+
+  /* 폰트 */
+  --font-jejudoldam: "JejuDoldam";
+}
+
+@font-face {
+  font-family: "JejuDoldam";
+  src: url("/font/EARLYFONT_JEJUDOLDAM/EF_jejudoldam(OTF).otf") format("opentype"),
+    url("/font/EARLYFONT_JEJUDOLDAM/EF_jejudoldam(TTF).ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: "Pretendard";
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Pretendard";
+}
+
+body {
+  line-height: 1;
+  background-color: var(--bg-gray);
+  font-size: 16px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.openEditStudyModalButton {
+  all: unset;
+  cursor: pointer;
+  color: var(--color-green-300);
+  font-size: 16px;
+}

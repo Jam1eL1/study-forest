@@ -14,27 +14,25 @@ model User {
   password  String
   createAt  DateTime @default(now())
   updatedAt DateTime @updatedAt
-
-  Study  Study[]  @relation("UserStudy")
-  Emojis Emojis[] @relation("UserEmojis")
-  Habit  Habit[]  @relation("UserHabit")
+  studies   Study[]  @relation("UserStudies")
+  emojis    Emojis[] @relation("UserEmojis")
 }
 
 model Study {
-  id          Int                @id @default(autoincrement())
+  id          Int               @id @default(autoincrement())
   authorId    String
   nickName    String
   title       String
   description String
   password    String?
-  background  Study_backgrounds?
+  background  Study_backgrounds
   point       Int?
-  createAt    DateTime           @default(now())
-  updatedAt   DateTime           @updatedAt
-
-  author User     @relation("UserStudy", fields: [authorId], references: [id])
-  Emojis Emojis[] @relation("StudyEmojis")
-  Focus  Focus[]  @relation("StudyFocus")
+  createAt    DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  author      User              @relation("UserStudies", fields: [authorId], references: [id])
+  emojis      Emojis[]          @relation("StudyEmojis")
+  focuses     Focus[]           @relation("StudyFocuses")
+  habits      Habit[]           @relation("StudyHabits")
 }
 
 enum Study_backgrounds {
@@ -43,42 +41,41 @@ enum Study_backgrounds {
   bg3
   bg4
   bg5
+  bg6
+  bg7
+  bg8
 }
 
 model Emojis {
-  id          Int     @id @default(autoincrement())
-  studyId     Int
-  checkUserId String?
-
+  id           Int     @id @default(autoincrement())
+  studyId      Int?
+  checkUserId  String?
   emojiContent String?
-
-  Study     Study? @relation("StudyEmojis", fields: [studyId], references: [id])
-  checkUser User?  @relation("UserEmojis", fields: [checkUserId], references: [id])
+  study        Study?  @relation("StudyEmojis", fields: [studyId], references: [id])
+  checkUser    User?   @relation("UserEmojis", fields: [checkUserId], references: [id])
 }
 
 model Habit {
-  id        Int         @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   title     String
-  createAt  DateTime    @default(now())
-  updatedAt DateTime    @updatedAt
-  userId    String
-  User      User        @relation("UserHabit", fields: [userId], references: [id])
-  HabitList HabitList[]
-}
-
-model HabitList {
-  id         Int     @id @default(autoincrement())
-  habitId    Int
-  content    String
-  habitCheck Boolean
-  Habit      Habit   @relation(fields: [habitId], references: [id])
+  monday    Boolean  @default(false)
+  tuesday   Boolean  @default(false)
+  wednesday Boolean  @default(false)
+  thursday  Boolean  @default(false)
+  friday    Boolean  @default(false)
+  saturday  Boolean  @default(false)
+  sunday    Boolean  @default(false)
+  createAt  DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  study     Study    @relation("StudyHabits", fields: [studyId], references: [id])
+  studyId   Int
 }
 
 model Focus {
   id        Int      @id @default(autoincrement())
   studyId   Int
-  complete  Boolean
+  complete  Boolean  @default(false)
   createAt  DateTime @default(now())
   updatedAt DateTime @updatedAt
-  Study     Study    @relation("StudyFocus", fields: [studyId], references: [id])
+  study     Study    @relation("StudyFocuses", fields: [studyId], references: [id])
 }
