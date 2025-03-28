@@ -26,7 +26,14 @@ const EditStudyModal = ({ isOpen, onClose }) => {
 
       console.log(response.data);
 
+<<<<<<< HEAD
       if (response.data.success) {
+=======
+      const data = await response.json();
+      console.log(data);
+
+      if (data.success) {
+>>>>>>> 83b45e2 (feat: 스터디 업데이트 모듈 구현)
         navigate("/edit-study-form"); // 비밀번호 검증 성공 시 'edit-study-form' 경로로 이동
       } else {
         setErrorMessage("비밀번호 검증에 실패했습니다. 다시 시도해주세요."); // 비밀번호 검증 실패 시 오류 메시지

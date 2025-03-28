@@ -3,7 +3,11 @@ import prisma from "../../db/prisma/client.prisma.js";
 
 const studyUpdate = express.Router();
 
+<<<<<<< HEAD
 studyUpdate.put("/study/:studyId/update", async (req, res) => {
+=======
+studyUpdate.post("/verify-password", async (req, res) => {
+>>>>>>> 83b45e2 (feat: 스터디 업데이트 모듈 구현)
   const data = req.body;
 
   try {
@@ -35,8 +39,16 @@ studyUpdate.put("/study/:studyId/update", async (req, res) => {
       message: "스터디 정보가 성공적으로 업데이트되었습니다.",
       updatedStudy,
     });
+<<<<<<< HEAD
   } catch (err) {
     next(err);
+=======
+  } catch (error) {
+    console.error("스터디 업데이트 중 오류 발생", error);
+    res
+      .status(500)
+      .json({ success: false, message: "서버 오류가 발생했습니다." });
+>>>>>>> 83b45e2 (feat: 스터디 업데이트 모듈 구현)
   }
 });
 
