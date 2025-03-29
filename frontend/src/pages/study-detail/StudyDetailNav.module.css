@@ -52,18 +52,8 @@ button {
   display: flex;
   gap: 8px;
   max-width: 240px;
-}
-
-.emojis img {
-  width: 24px;
-  height: 24px;
-}
-
-.emoji {
-  width: 56px;
-  height: 31px;
-  border: none;
-  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .addBtn {
@@ -74,7 +64,7 @@ button {
   border: 1px solid #0000001a;
   border-radius: 50px;
   width: 67px;
-  height: 30px;
+  height: 31px;
 }
 
 .addBtn p {
