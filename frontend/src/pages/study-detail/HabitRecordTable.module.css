@@ -1,7 +1,8 @@
 .container {
   border: 1px solid var(--color-gray-200);
   border-radius: 20px;
-  padding: 16px;
+  padding-left: 16px;
+  padding-top: 16px;
   width: 100%;
   max-width: 100%;
   overflow-x: auto;
@@ -26,6 +27,7 @@
 }
 
 .emptyHeaderCell {
+  width: 122px;
   grid-column: 1;
 }
 
@@ -34,16 +36,15 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
-  color: var(--color-gray-818181, #818181);
-  font-size: 16px;
+  color: var(--color-gray-300);
+  font-size: 13px;
   gap: 0;
 }
 
 .dayCell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 0;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
 }
 
 .dayCell:nth-child(n + 4) {
@@ -51,13 +52,13 @@
 }
 
 .habitNameCell {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 24px;
+  width: 122px;
+  padding: 15px 16px;
   font-weight: 700;
-  color: var(--color-black-414141, #414141);
+  font-size: 14px;
+  color: var(--color-black);
   text-align: right;
+  line-height: 100%;
 }
 
 .statusCells {
@@ -72,9 +73,6 @@
 }
 
 .statusCell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 64px;
   padding: 14px;
 }
@@ -89,8 +87,8 @@
 }
 
 .sticker {
-  width: 16px;
-  height: 16px;
+  width: 36px;
+  height: 36px;
   display: block;
 }
 
@@ -99,6 +97,10 @@
 }
 
 @media screen and (min-width: 744px) {
+  .container {
+    padding: 24px;
+  }
+
   .title {
     font-size: 24px;
   }
@@ -107,8 +109,21 @@
     grid-template-columns: repeat(7, 1fr);
   }
 
+  .emptyHeaderCell {
+    width: 152px;
+  }
+  .dayCell {
+    font-size: 18px;
+  }
+
   .dayCell:nth-child(n + 4) {
-    display: flex;
+    display: block;
+  }
+
+  .habitNameCell {
+    width: 152px;
+    font-size: 18px;
+    padding: 11px 24px;
   }
 
   .statusCells {
@@ -116,6 +131,17 @@
   }
 
   .statusCell:nth-child(n + 4) {
-    display: flex;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .emptyHeaderCell {
+    width: 246px;
+  }
+
+  .habitNameCell {
+    width: 246px;
+    padding: 21.5px 24px;
   }
 }

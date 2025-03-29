@@ -7,18 +7,6 @@ function StudyDetailNav() {
     <div className={styles.header}>
       {/* 이부분 나중에 이모지 기능 연동하면 src 변경해야함 */}
       <div className={styles.emojis}>
-        <button className={styles.emoji}>
-          <img src="/images/stickers/Subtract-1.svg" alt="emoji" />
-        </button>
-        <button className={styles.emoji}>
-          <img src="/images/stickers/Subtract-2.svg" alt="emoji" />
-        </button>
-        <button className={styles.emoji}>
-          <img src="/images/stickers/Subtract-3.svg" alt="emoji" />
-        </button>
-        <button className={styles.emoji}>
-          <img src="/images/stickers/Subtract-4.svg" alt="emoji" />
-        </button>
         <button className={styles.addBtn}>
           <img src={smileIcon} />
           <p>추가</p>
