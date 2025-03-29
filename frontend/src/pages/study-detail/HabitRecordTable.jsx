@@ -46,20 +46,31 @@ function HabitRecordTable() {
 
   const days = ["월", "화", "수", "목", "금", "토", "일"];
 
-  const stickerThemes = [
-    [
-      stickerBlue100,
-      stickerBlue200,
-      stickerBlue300,
-      stickerBlue400,
-      stickerBlue500,
-    ],
-    [stickerGreen100, stickerGreen200, stickerGreen300, stickerGreen400],
-    [stickerOrange100, stickerOrange200, stickerOrange300],
-    [stickerPink100, stickerPink200, stickerPink300, stickerPink400],
-    [stickerPurple100, stickerPurple200],
-    [stickerBlue300, stickerGreen300, stickerPink300],
+  const allStickers = [
+    stickerBlue100,
+    stickerBlue200,
+    stickerBlue300,
+    stickerBlue400,
+    stickerBlue500,
+    stickerGreen100,
+    stickerGreen200,
+    stickerGreen300,
+    stickerGreen400,
+    stickerOrange100,
+    stickerOrange200,
+    stickerOrange300,
+    stickerPink100,
+    stickerPink200,
+    stickerPink300,
+    stickerPink400,
+    stickerPurple100,
+    stickerPurple200,
   ];
+
+  const getStickerForRow = (rowIndex) => {
+    const stickerIndex = rowIndex % allStickers.length;
+    return allStickers[stickerIndex];
+  };
 
   return (
     <div className={styles.container}>
@@ -90,7 +101,7 @@ function HabitRecordTable() {
                 >
                   <div className={styles.stickerWrapper}>
                     <img
-                      src={stickerWhite}
+                      src={getStickerForRow(rowIndex)}
                       alt="Sticker"
                       className={styles.sticker}
                     />
