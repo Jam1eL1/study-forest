@@ -133,6 +133,18 @@
   font-size: 80px;
 }
 
+.timeover {
+  color: var(--text-gray);
+}
+
+.timeover p {
+  color: var(--text-gray);
+}
+
+.timeover input {
+  color: var(--text-gray);
+}
+
 .focusMinTimer {
   text-align: end;
   color: var(--text-black);

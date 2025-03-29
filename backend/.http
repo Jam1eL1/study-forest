@@ -17,3 +17,15 @@ Content-Type: application/json
 {
     "title":"11번째 습관"
 }
+
+###
+POST http://localhost:5090/api/study-create
+Content-Type: application/json
+
+{
+    "nickName": "진짜 마지막 테스트입니다",
+    "title": "테스트중입니다",
+    "description": "마지막으로 해봅니다.",
+    "background": "bg7",
+    "encryptedPassword": "1234789"
+}

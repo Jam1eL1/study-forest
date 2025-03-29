@@ -1,31 +1,27 @@
 import express from "express";
-import prisma from "@prisma/client";
+import prisma from "../../db/prisma/client.prisma.js";
 
 const studyVerifyPassword = express.Router();
 
-studyVerifyPassword.post("/verify-password", async (req, res) => {
-  const { userId, password } = req.body;
+studyVerifyPassword.post("/", async (req, res, next) => {
+  const { studyId, encryptedPassword } = req.body;
 
   try {
-    const user = await prisma.user.findUnique({
-      where: { id: userId, password: password },
+    const study = await prisma.study.findUnique({
+      where: {
+        id: parseInt(studyId),
+        encryptedPassword: encryptedPassword,
+      },
     });
 
-    if (!user) {
-      return res
-        .status(404)
-        .json({ success: false, message: "사용자를 찾을 수 없습니다." });
+    if (!study) {
+      return res.status(404).json({
+        success: false,
+        message: "스터디 또는 비밀번호가 일치하지 않습니다.",
+      });
     }
 
-    if (password) {
-      res
-        .status(200)
-        .json({ success: true, message: "비밀번호가 일치합니다." });
-    } else {
-      res
-        .status(401)
-        .json({ success: false, message: "비밀번호가 일치하지 않습니다." });
-    }
+    res.status(200).json({ success: true, message: "비밀번호가 일치합니다." });
   } catch (err) {
     next(err);
   }

@@ -37,6 +37,7 @@ model Emojis {
   id           Int    @id @default(autoincrement())
   studyId      Int
   emojiContent String
+  count        Int    @default(0) // 이모지카운트 추가
   study        Study  @relation("StudyEmojis", fields: [studyId], references: [id], onDelete: Cascade)
 }
 
@@ -70,10 +71,11 @@ enum DAY_OF_WEEK {
 }
 
 model Focus {
-  id        Int      @id @default(autoincrement())
-  studyId   Int
-  complete  Boolean  @default(false)
-  createAt  DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  study     Study    @relation("StudyFocuses", fields: [studyId], references: [id], onDelete: Cascade)
+  id         Int      @id @default(autoincrement())
+  studyId    Int
+  totalPoint Int      @default(0) // totalPoint 필드 추가
+  complete   Boolean  @default(false)
+  createAt   DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  study      Study    @relation("StudyFocuses", fields: [studyId], references: [id], onDelete: Cascade)
 }

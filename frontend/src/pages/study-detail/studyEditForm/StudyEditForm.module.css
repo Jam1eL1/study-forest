@@ -1,0 +1,56 @@
+.section {
+  margin-top: 40px;
+}
+
+.article {
+  max-width: 344px;
+  width: 100%;
+  margin: 0 auto 171px;
+  padding: 16px 16px 20px;
+  border-radius: 20px;
+  background: var(--bg-white);
+}
+
+.studyCreateTitle {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.studyCreateTopInputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.studyCreateBottomBox {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.createBtn {
+  width: 100%;
+  height: 58px;
+  border-radius: 16px;
+  border: none;
+  background: var(--bg-green);
+  color: var(--bg-white);
+  font-family: var(--font-jejudoldam);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 744px) {
+  .article {
+    max-width: 696px;
+    padding: 24px 24px 40px;
+    margin: 0 auto 197px;
+  }
+  .studyCreateTitle {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}

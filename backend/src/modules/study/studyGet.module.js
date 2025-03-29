@@ -1,19 +1,17 @@
 import express from 'express';
 import prisma from '../../db/prisma/client.prisma.js';
 
-const getStudy = express.Router();
+const studyGetRouter = express.Router();
 
-getStudy.get('/get-study', async (req, res, next) => {
+studyGetRouter.get('/', async (req, res, next) => {
   try {
     const {
       offset = 0,
-      limit = 10,
+      limit = 6,
       sort = 'desc',
       search = '',
       orderBy = 'createAt',
     } = req.query;
-
-    console.log(offset, limit, sort, search, orderBy);
 
     const study = await prisma.study.findMany({
       where: {
@@ -32,6 +30,9 @@ getStudy.get('/get-study', async (req, res, next) => {
           },
         ],
       },
+      omit: {
+        encryptedPassword: true,
+      },
       orderBy: {
         [orderBy]: sort === 'desc' ? 'desc' : 'asc',
       },
@@ -45,4 +46,4 @@ getStudy.get('/get-study', async (req, res, next) => {
   }
 });
 
-export default getStudy;
+export default studyGetRouter;
