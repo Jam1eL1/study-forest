@@ -1,15 +1,15 @@
-import express from "express";
-import prisma from "../../db/prisma/client.prisma.js";
-import bcrypt from "bcrypt";
+import express from 'express';
+import prisma from '../../db/prisma/client.prisma.js';
+import bcrypt from 'bcrypt';
 
 const postStudyRouter = express.Router();
 
-postStudyRouter.post("/", async (req, res, next) => {
+postStudyRouter.post('/', async (req, res, next) => {
   try {
     const data = req.body;
 
     if (!data.title || !data.encryptedPassword) {
-      res.status(400).json({ message: "제목 또는 비밀번호가 없습니다." });
+      res.status(400).json({ message: '제목 또는 비밀번호가 없습니다.' });
     }
 
     const salt = await bcrypt.genSalt(10);

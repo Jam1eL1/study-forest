@@ -1,0 +1,75 @@
+.browseStudyContainer {
+  width: 100%;
+  max-width: 1200px;
+  background-color: var(--bg-white);
+  padding: 20px;
+
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 15px 0;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-black);
+
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.moreButtonContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.moreButton {
+  width: 290px;
+  height: 53px;
+
+  font-size: 16px;
+  color: var(--text-green);
+  background: var(--bg-white);
+
+  border: 1px solid #dddddd;
+  border-radius: 25px;
+
+  margin-top: 20px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+.moreButton:disabled:hover {
+  background: var(--bg-white);
+  color: var(--text-green);
+}
+
+.moreButton:hover {
+  background: var(--bg-green);
+  color: var(--text-white);
+}
+
+@media screen and (min-width: 744px) {
+  .browseStudyContainer {
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+  .topContainer {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

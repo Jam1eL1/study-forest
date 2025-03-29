@@ -15,6 +15,7 @@ export default defineConfig({
       { find: '@components', replacement: '/src/components' },
       { find: '@styles', replacement: '/src/styles' },
       { find: '@utils', replacement: '/src/utils' },
+      { find: '@api', replacement: '/src/api' },
     ],
   },
 });

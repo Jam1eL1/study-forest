@@ -1,12 +1,12 @@
-import BrowseCardList from './BrowseCardList';
+import BrowseSection from './BrowseSection';
 import styles from './Home.module.css';
-import RecentlyCardList from './RecentlyCardList';
+import RecentlySection from './RecentlySection';
 
 const Home = () => {
   return (
     <section className={styles.home}>
-      <RecentlyCardList />
-      <BrowseCardList />
+      <RecentlySection />
+      <BrowseSection />
     </section>
   );
 };

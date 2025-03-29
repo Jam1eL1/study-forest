@@ -1,7 +1,7 @@
-import express from "express";
-import router from "./modules/index.module.js";
-import errorHandler from "./middlewares/errorHandler.module.js";
-import cors from "cors";
+import express from 'express';
+import router from './modules/index.module.js';
+import errorHandler from './middlewares/errorHandler.module.js';
+import cors from 'cors';
 
 const app = express();
 const PORT = 5090;

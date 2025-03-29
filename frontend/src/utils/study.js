@@ -1,9 +1,12 @@
-import { getRandomStudies } from '../pages/home/api/home.api';
+import { getStudies } from '@api/home/getStudy.api';
 
 const loadMoreStudies = async (currentStudies, setStudies, setIsLoading) => {
   try {
     setIsLoading(true);
-    const data = await getRandomStudies(6);
+    const data = await getStudies({
+      offset: currentStudies.length,
+      limit: 6,
+    });
     setStudies([...currentStudies, ...data]);
   } catch (error) {
     console.error('Failed to load more studies:', error);

@@ -1,21 +1,10 @@
 import { useEffect, useState } from 'react';
 import HomeCard from './HomeCard';
-import styles from './RecentlyCardList.module.css';
-import { saveAndNavigateToStudy } from '../../utils/study';
-import { useNavigate } from 'react-router-dom';
+import styles from './RecentlySection.module.css';
 
-const RecentlyCardList = () => {
-  const navigate = useNavigate();
-
+const RecentlySection = () => {
   const [studyForestLocalStorageData, setStudyForestLocalStorageData] =
     useState([]);
-
-  const clickDetailStudy = (id) => {
-    const currentStudy = studyForestLocalStorageData.find(
-      (study) => study.id === id
-    );
-    saveAndNavigateToStudy(currentStudy, navigate);
-  };
 
   useEffect(() => {
     const data = localStorage.getItem('studyForest');
@@ -32,8 +21,8 @@ const RecentlyCardList = () => {
         <div className={styles.cardListContainer}>
           <ul className={styles.cardList}>
             {studyForestLocalStorageData.map((data) => (
-              <div key={data.id} className={styles.cardWrapper}>
-                <HomeCard data={data} onClick={clickDetailStudy} />
+              <div key={`recently-${data.id}`} className={styles.cardWrapper}>
+                <HomeCard data={data} />
               </div>
             ))}
           </ul>
@@ -45,4 +34,4 @@ const RecentlyCardList = () => {
   );
 };
 
-export default RecentlyCardList;
+export default RecentlySection;

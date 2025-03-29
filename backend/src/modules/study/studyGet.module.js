@@ -28,7 +28,21 @@ studyGetRouter.get('/', async (req, res, next) => {
               mode: 'insensitive',
             },
           },
+          {
+            nickName: {
+              contains: search,
+              mode: 'insensitive',
+            },
+          },
         ],
+      },
+      include: {
+        emojis: true,
+        habits: {
+          include: {
+            HabitDone: true,
+          },
+        },
       },
       omit: {
         encryptedPassword: true,
@@ -39,6 +53,8 @@ studyGetRouter.get('/', async (req, res, next) => {
       skip: Number(offset),
       take: Number(limit),
     });
+
+    console.log(study);
 
     res.status(200).json({ success: true, data: study });
   } catch (e) {
